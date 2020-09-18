@@ -21,7 +21,7 @@ async function add(user) {
 
 		return findById(id);
 	} catch (error) {
-		throw error;
+		return error;
 	}
 }
 

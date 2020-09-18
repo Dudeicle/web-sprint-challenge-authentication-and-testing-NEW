@@ -43,9 +43,6 @@ describe("jokes-model", () => {
 
 			// step 3 find the item by ID
 			expect(findbyTestUserPresent2[0].id).toBe(1);
-
-			////// extra truncate - don't know why but users added through tests seem to be sticking around for some reason
-			await db("users").truncate();
 		});
 	});
 });

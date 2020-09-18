@@ -22,7 +22,7 @@ describe("auth router", () => {
 				password: "registerTestPassword",
 			});
 			const RegisterTest2 = await db("users");
-			expect(RegisterTest2).toHaveLength(2);
+			expect(RegisterTest2).toHaveLength(1);
 
 			////// extra truncate - don't know why but users added through tests seem to be sticking around for some reason
 			await db("users").truncate();

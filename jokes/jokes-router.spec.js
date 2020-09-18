@@ -24,6 +24,8 @@ describe("jokes-router", () => {
 				username: "getTestUsername",
 				password: "getTestPassword",
 			});
+			const testtest = await db("users");
+			expect(testtest).toHaveLength(1);
 
 			// step 3 login a user
 			let res = await request(server).post("/api/auth/login").send({
