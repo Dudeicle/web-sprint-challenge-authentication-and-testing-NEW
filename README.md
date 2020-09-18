@@ -26,11 +26,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+A session handles authentication on the server side, while Tokens handle auth on the user's side. The pros and cons of this difference is that Tokens are much more scalable since on a large scale project they will require far less interations with the database. While Sessions are more work for the server, they are more secure since no authentication data ever leaves the server-side.
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+While bcrypt is not a totally secure solution, because the hashed password can still be worked on using outside CPU power. It does offer a small degree of security in the sense that with this one small filter(hashed password) you now require any third party with ill intentions to apply dedicated computing power to getting a password. bcrypt "hashes" a password by changing it into a string of random characters over and over again to an exponent set by the programmer.
 
 3. How are unit tests different from integration and end-to-end testing.
 
+Unit tests are tests of indiviual features, and seem to be more of a sanity check and security net for a programmer to build up underneath of them while they code, allowing a greater degree of comfort when augmenting large code basis because the fear of breaking code beyond repair is greatly reduced. While integration testing will test interactions between features in a backend or website, I imagine integration tests are an essential follow-up after completely Unit testing a product.
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+
+While still a strange procedure to me, the concept makes sense. To first create the tests for a project, based on a very carefully laid plan. Then to go ahead and write the code base that those tests apply to, and if your failing test then passes, you know you can move on to the next feature. I believe this is more than likely a way of ensuring tests get written rather than genuinely a preferred method of writing code. Because testing may be a difficult habit for an experienced coder to build up, if they require the tests be written first, it ensures their existance in the final project. The coding equivilant of eating your vegetables first to get them out of the way.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -38,12 +46,12 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: git push origin `<firstName-lastName>`
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: Project Requirements
 
